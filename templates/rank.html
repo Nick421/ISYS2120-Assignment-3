@@ -1,0 +1,30 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container">
+        <h1 class="title">Department Ranking</h1>
+
+        <table class="styled">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Department</th>
+                    <th>Avg worked fraction</th>
+                    <th>Max worked fraction</th>
+                    <th>Min worked fraction</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for department in departments %}
+                    <tr>
+                        <td>{{ department[0] }}</td>
+                        <td>{{ department[1] }}</td>
+                        <td>{{ department[2] }}</td>
+                        <td>{{ department[3] }}</td>
+                        <td>{{ department[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include 'bottom.html' %}

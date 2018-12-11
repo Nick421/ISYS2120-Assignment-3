@@ -1,0 +1,29 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container">
+        <h1 class="title">Manager's phone numbers for each deparment</h1>
+
+        <table class="styled">
+            <thead>
+                <tr>
+                    <th>Department name</th>
+                    <th>Manager Id</th>
+                    <th>Manager name</th>
+                    <th>Phone number</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in phones %}
+                    <tr>
+                        <td>{{ x[0] }}</td>
+                        <td>{{ x[1] }}</td>
+                        <td>{{ x[2] }}</td>
+                        <td>{{ x[3] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include 'bottom.html' %}

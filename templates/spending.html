@@ -1,0 +1,34 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container">
+        <h1 class="title">Spendings per month </h1>
+
+        <table class="styled">
+            <thead>
+                <tr>
+                    <th>month</th>
+                    <th>year</th>
+                    <th>Total repair expenditure</th>
+                    <th>Repair ids</th>
+                    <th>ABN</th>
+                    <th>Service Name</th>
+                    <th>Max for single transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for spend in spendings %}
+                    <tr>
+                        <td>{{ spend[0] }}</td>
+                        <td>{{ spend[1] }}</td>
+                        <td>{{ spend[2] }}</td>
+                        <td>{{ spend[3] }}</td>
+                        <td>{{ spend[4] }}</td>
+                        <td>{{ spend[5] }}</td>
+                        <td>{{ spend[6] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include 'bottom.html' %}
